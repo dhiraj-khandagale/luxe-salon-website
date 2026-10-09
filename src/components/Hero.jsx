@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import HomePage from "../assets/HomePage.png";
+import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <section
@@ -88,7 +89,7 @@ const Hero = () => {
             >
               {/* Primary Button */}
               <a
-                href="#booking"
+                href="/booking"
                 className="btn font-ui rounded-0 px-4 py-3"
                 style={{
                   backgroundColor: "#C9A96E",
@@ -104,7 +105,7 @@ const Hero = () => {
 
               {/* Secondary Button */}
               <a
-                href="#services"
+                href="/services"
                 className="btn font-ui rounded-0 px-4 py-3"
                 style={{
                   backgroundColor: "transparent",
