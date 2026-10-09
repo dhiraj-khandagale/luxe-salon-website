@@ -1,6 +1,10 @@
+
 import { motion } from "framer-motion";
-import HomePage from "../assets/HomePage.png";
 import { Link } from "react-router-dom";
+import HomePage from "../assets/HomePage.png";
+
+const MotionLink = motion(Link);
+
 const Hero = () => {
   return (
     <section
@@ -13,10 +17,9 @@ const Hero = () => {
     >
       {/* Background Image */}
       <div
-        className={`position-absolute top-0 end-0 w-100 h-100`}
+        className="position-absolute top-0 end-0 w-100 h-100"
         style={{
-          backgroundImage:
-            `linear-gradient(90deg, rgba(11,11,11,0.95) 0%, rgba(11,11,11,0.65) 45%, rgba(11,11,11,0.2) 100%), url(${HomePage})`,
+          backgroundImage: `linear-gradient(90deg, rgba(11,11,11,0.95) 0%, rgba(11,11,11,0.65) 45%, rgba(11,11,11,0.2) 100%), url(${HomePage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -26,7 +29,6 @@ const Hero = () => {
       <div className="container position-relative" style={{ zIndex: 2 }}>
         <div className="row">
           <div className="col-lg-7">
-
             {/* Small Heading */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -88,36 +90,41 @@ const Hero = () => {
               className="d-flex gap-3 flex-wrap mt-4"
             >
               {/* Primary Button */}
-              <a
-                href="/booking"
+              <MotionLink
+                to="/booking"
                 className="btn font-ui rounded-0 px-4 py-3"
+                whileHover={{ y: -3 }}
+                whileTap={{ scale: 0.97 }}
                 style={{
                   backgroundColor: "#C9A96E",
                   color: "#0B0B0B",
                   border: "1px solid #C9A96E",
                   fontWeight: "600",
                   letterSpacing: "0.5px",
+                  textDecoration: "none",
                 }}
               >
                 Book Appointment
                 <i className="bi bi-arrow-up-right ms-2"></i>
-              </a>
+              </MotionLink>
 
               {/* Secondary Button */}
-              <a
-                href="/services"
+              <MotionLink
+                to="/services"
                 className="btn font-ui rounded-0 px-4 py-3"
+                whileHover={{ y: -3 }}
+                whileTap={{ scale: 0.97 }}
                 style={{
                   backgroundColor: "transparent",
                   border: "1px solid rgba(245,239,230,0.5)",
                   color: "#F5EFE6",
                   fontWeight: "500",
+                  textDecoration: "none",
                 }}
               >
                 Explore Services
-              </a>
+              </MotionLink>
             </motion.div>
-
           </div>
         </div>
       </div>
@@ -146,7 +153,6 @@ const Hero = () => {
           </div>
         </div>
       </motion.div>
-
     </section>
   );
 };
