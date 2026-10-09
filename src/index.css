@@ -1,0 +1,152 @@
+@import "tailwindcss";
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+*{
+  margin :0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5efe6;
+  color: #0b0b0b;
+}
+
+.font-display {
+  font-family: "Playfair Display", serif;
+}
+
+.font-body {
+  font-family: "Manrope", sans-serif;
+}
+
+.font-ui {
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-link-custom {
+  color: #f5efe6;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  color: #c9a96e;
+}
+
+.mobile-nav-link {
+  color: #f5efe6;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(245, 239, 230, 0.08);
+}
+
+.mobile-nav-link:hover {
+  color: #c9a96e;
+}
+.service-card:hover {
+  border-color: #c9a96e !important;
+  background-color: #151515 !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+/* =========================================================
+   GLOBAL PREMIUM POLISH
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 82px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #c9a96e;
+  outline-offset: 3px;
+}
+
+/* Prevent sections from hiding underneath fixed navbar */
+section[id] {
+  scroll-margin-top: 82px;
+}
+
+/* Premium selection */
+::selection {
+  background: #c9a96e;
+  color: #0b0b0b;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0b0b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9a96e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dfc28d;
+}
+
+/* =========================================================
+   MOBILE POLISH
+========================================================= */
+
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+
+  section[id] {
+    scroll-margin-top: 72px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
